@@ -19,7 +19,7 @@ app.use(helmet({
 }));
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
-const allowed = [process.env.FRONTEND_URL, 'http://localhost:5173', 'http://localhost:3000'].filter(Boolean);
+const allowed = [process.env.FRONTEND_URL, 'http://localhost:5173', 'http://localhost:3000', 'http://192.168.0.130:5173'].filter(Boolean);
 
 app.use(cors({
   origin(origin, cb) {
