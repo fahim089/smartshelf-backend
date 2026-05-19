@@ -61,6 +61,8 @@ app.get('/health', (_req, res) =>
   res.json({ status: 'ok', timestamp: new Date().toISOString(), version: '2.0.0' })
 );
 
+app.get('/', (_req, res) => res.send('Welcome to SmartShelf API Backend!'));
+
 // ── Routes ────────────────────────────────────────────────────────────────────
 app.use('/api/auth',  authRoutes);   // login, logout, me, profile, change-password
 app.use('/api/admin', adminRoutes);  // admin-only full access
